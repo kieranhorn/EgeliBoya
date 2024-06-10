@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<nav>
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <div class="hamburger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="bayer.html">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkımızda</a></li>
+        
+        <li><a href="Autorefinishes.html">Ürünler</a></li>
+                <li><a href="location.html">Konum</a></li>
+                
+                <li><a href="contact.html" class="contact">İletişim</a></li>
+    </ul>
+</nav>
+
+<body>
+    <h1 class="titles">Blog Gönderilerimiz</h1>
+    <div class="blog-post">
+        <div class="post-item">
+            <img src="3797.jpg">
+            <div class="post-content">
+                <h2>MIDOFMED</h2>
+                <p>İzmir İş Kadınları Derneği, şirketimiz Egeli Boya ile birlikte Türkiye'de düzenlenen prestijli MID OF MED Akdeniz Havuz
+                İş Zirvesi'ne gururla katıldı. Bu etkinlik, iş dünyasındaki en son trendleri, zorlukları ve fırsatları tartışmak ve
+                keşfetmek için Akdeniz bölgesinin dört bir yanından sektör liderlerini, girişimcileri ve profesyonelleri bir araya
+                getirdi. Katılımımız, iş mükemmelliğini teşvik etme, sektördeki diğer kilit oyuncularla ağ kurma ve kadınların iş
+                dünyasındaki rolünü destekleme konusundaki kararlılığımızın altını çizdi. Zirvede kapsamlı tartışmalara katıldık,
+                çeşitli atölye çalışmaları ve seminerlere katıldık ve yenilikçi ürün ve hizmetlerimizi sergiledik. Bu deneyim sadece
+                değerli bilgiler edinmemizi ve yeni ortaklıklar kurmamızı sağlamakla kalmadı, aynı zamanda Akdeniz bölgesinde iş
+                geliştirme ve sürdürülebilirlik konusundaki daha geniş diyaloğa katkıda bulunmamızı da sağladı.
+                </p>
+            </div>
+        </div>
+        <div class="post-item">
+            <img src="sg1.jpg" alt="Image 2">
+            <div class="post-content">
+                <h2>Aşındırıcı Dünyası</h2>
+                <p>Egeli Boya’nın kurucu müdürü Öznur Bayer, Saint-Gobain Aşındırıcı Dünyası dergisinin son sayısında sayfa 12-13’te yer
+                alan röportajında sektörle ilgili önemli görüşlerini paylaştı. Bayer, Egeli Boya’nın kuruluş sürecini, karşılaşılan
+                zorlukları ve elde edilen başarıları detaylandırdı. Ayrıca, aşındırıcı ürünlerin inovasyonundaki son gelişmeleri ve
+                sürdürülebilirlik konusundaki yaklaşımlarını anlattı. Röportaj, hem sektörel gelişmeler hem de Egeli Boya'nın geleceğe
+                yönelik planları hakkında değerli bilgiler sunuyor. <a href="artikel.pdf"> Daha fazlasını buradan okuyun</a>
+            </div>
+        </div>
+        <div class="post-item">
+            <img src="3804.jpg" alt="Image 3">
+            <div class="post-content">
+                <h2>Ankara Sanayi Odası Ziyareti</h2>
+                <p>Egeli Boya olarak, İzmir İş Kadınları Derneği’nin (İZİKAD) organize ettiği bir etkinlik kapsamında Ankara Sanayi
+                Odası'nı ziyaret etme fırsatı bulduk. Bu ziyaret, hem iş dünyasında yeni fırsatlar yaratmak hem de sanayi sektöründeki
+                yenilikleri yakından görmek adına oldukça verimli geçti.</p>
+            </div>
+        </div>
+        <div class="post-item">
+            <img src="3795.jpg" alt="Image 4">
+            <div class="post-content">
+                <h2>IZMIR YÜKSEK TEKNOLOJI ENSTITÜSÜ</h2>
+                <p>Egeli Boya olarak, İzmir İş Kadınları Derneği’nin (İZİKAD) organize ettiği etkinlik kapsamında İzmir Yüksek Teknoloji
+                Enstitüsü'nü (İYTE) ziyaret etme fırsatı bulduk. Bu ziyaret, hem akademik dünya ile iş birliği olanaklarını
+                değerlendirmek hem de teknoloji ve inovasyon alanlarındaki yenilikleri yakından görmek adına oldukça verimli geçti.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Hızlı bağlantılar</h3>
+            <ul>
+                <li><a href="bayer.html">Ana Sayfa</a></li>
+               
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Veri ve Gizlilik</h3>
+            <ul>
+                <li><a href="#">Veri koruma</a></li>
+                <li><a href="#">Künye</a></li>
+                <li><a href="#">Cookies</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact-info">
+            <h3>Bize ulaşın</h3>
+            <p><strong>Telefon:</strong> +90(232) 3653035</p>
+            <p><strong>FAX:</strong> +90(232) 3653036</p>
+            <p><strong>Email:</strong> İnfo@egeliboya.com</p>
+            <p><strong>Adres:</strong> Karacaoğlan mahallesi, 6172 Sokak, No:1, 35070 Bornova/İzmir, Türkiye</p>
+        </div>
+    </div>
+</footer>
+
+</html>

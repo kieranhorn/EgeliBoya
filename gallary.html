@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallary</title>
+    <link rel="stylesheet" href="gallary.css">
+</head>
+
+<nav>
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <div class="hamburger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="bayer.html">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkımızda</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li>
+            <a href="Autorefinishes.html">Ürünler</a>
+        </li>
+        <li><a href="location.html">Konum</a></li>
+        
+        <li><a href="contact.html" class="contact">İletişim</a></li>
+    </ul>
+</nav>
+
+
+<body>
+
+    <section id="pics">
+
+        <div class="galary">
+            <h1>Galeri</h1>
+        </div>
+
+
+        <div class="grid-container">
+            <div class="photo">
+                <img src="ga1.png" alt="Photo 1">
+                <h2>Photo Title 1</h2>
+                <p>Additional text under the photo</p>
+            </div>
+            <div class="photo">
+                <img src="g2.png" alt="Photo 1">
+                <h2>Photo Title 1</h2>
+                <p>Additional text under the photo</p>
+            </div>
+
+
+            <div class="photo">
+                <img src="g3.png" alt="Photo 1">
+                <h2>Photo Title 1</h2>
+                <p>Additional text under the photo</p>
+            </div>
+
+
+            <div class="photo">
+                <img src="g4.png" alt="Photo 2">
+                <h2>Photo Title 1</h2>
+                <p>Additional text under the photo</p>
+            </div>
+
+
+            <div class="photo">
+                <img src="g5.png" alt="Photo 2">
+                <h2>Photo Title 1</h2>
+                <p>Additional text under the photo</p>
+            </div>
+
+
+            <div class="photo">
+                <img src="g6.png" alt="Photo 2">
+                <h2>Photo Title 1</h2>
+                <p>Additional text under the photo</p>
+            </div>
+
+
+            <div class="photo">
+                <img src="g7.png" alt="Photo 1">
+                <h2>Photo Title 1</h2>
+                <p>Additional text under the photo</p>
+            </div>
+
+            <div class="photo">
+                <img src="g8.png" alt="Photo 1">
+                <h2>Photo Title 1</h2>
+                <p>Additional text under the photo</p>
+            </div>
+
+
+            <div class="photo">
+                <img src="ga9.png" alt="Photo 1">
+                <h2>Photo Title 1</h2>
+                <p>Additional text under the photo</p>
+            </div>
+
+            <div class="photo">
+                <img src="ga10.png" alt="Photo 1">
+                <h2>Photo Title 1</h2>
+                <p>Additional text under the photo</p>
+            </div>
+        </div>
+
+
+
+        <div class="pagination">
+            <a href="#" class="prev">&laquo; Prev</a>
+            <span class="page-number">Page 1</span>
+            <a href="#" class="next">Next &raquo;</a>
+        </div>
+
+        <script>document.addEventListener('DOMContentLoaded', function () {
+                const prevButton = document.querySelector('.prev');
+                const nextButton = document.querySelector('.next');
+                const pageNumber = document.querySelector('.page-number');
+                const photos = document.querySelectorAll('.photo');
+                const photosPerPage = 6;
+                let currentPage = 1;
+
+                function showPage(page) {
+                    const startIndex = (page - 1) * photosPerPage;
+                    const endIndex = startIndex + photosPerPage;
+
+                    photos.forEach(function (photo, index) {
+                        if (index >= startIndex && index < endIndex) {
+                            photo.style.display = 'block';
+                        } else {
+                            photo.style.display = 'none';
+                        }
+                    });
+
+                    pageNumber.textContent = `Page ${page}`;
+                }
+
+                function goToPrevPage() {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        showPage(currentPage);
+                    }
+                }
+
+                function goToNextPage() {
+                    const totalPages = Math.ceil(photos.length / photosPerPage);
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        showPage(currentPage);
+                    }
+                }
+
+                prevButton.addEventListener('click', goToPrevPage);
+                nextButton.addEventListener('click', goToNextPage);
+
+                // Show the initial page
+                showPage(currentPage);
+            });
+
+            document.querySelector('.hamburger-menu').addEventListener('click', function () {
+                document.querySelector('.nav-links').classList.toggle('active');
+            });
+
+
+        </script>
+</body>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Hızlı bağlantılar</h3>
+            <ul>
+                <li><a href="bayer.html">Ana Sayfa</a></li>
+                
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Veri ve Gizlilik</h3>
+            <ul>
+                <li><a href="#">Veri koruma</a></li>
+                <li><a href="#">Künye</a></li>
+                <li><a href="#">Cookies</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact-info">
+            <h3>Bize ulaşın</h3>
+            <p><strong>Telefon:</strong> +90(232) 3653035</p>
+            <p><strong>FAX:</strong> +90(232) 3653036</p>
+            <p><strong>Email:</strong> İnfo@egeliboya.com</p>
+            <p><strong>Adres:</strong> Karacaoğlan mahallesi, 6172 Sokak, No:1, 35070 Bornova/İzmir, Türkiye</p>
+        </div>
+    </div>
+</footer>
+
+</html>
